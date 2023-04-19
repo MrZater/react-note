@@ -1,0 +1,9 @@
+.active{
+    color: aqua;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a{
+    margin-right: 10px;
+}

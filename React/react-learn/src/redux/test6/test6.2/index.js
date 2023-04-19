@@ -1,0 +1,32 @@
+import {
+    createStore
+} from "redux";
+// import {configureStore} from '@reduxjs/toolkit'
+
+/**
+ * reducer本质上是一个普通的对象
+ * @param {*} state  之前仓库中的状态
+ * @param {*} action 描述要操作什么
+ */
+function reducer(state, action) {
+    // reducer附带如何处理数据的信息
+    if (action.type === 'increase') {
+        return state + 1
+    } else if (action.type === 'decrease') {
+        return state - 1
+    }
+    return state
+
+}
+// 创建仓库
+const store = createStore(reducer, 10)
+// 创建action，通过action的信息告诉仓库数据应如何处理
+const action={
+    type:'increase',
+}
+// 获取仓库中的数据
+console.log(store.getState())
+// 传入action修改仓库中的state
+store.dispatch(action)
+// 获取仓库中的数据
+console.log(store.getState())

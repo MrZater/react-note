@@ -1,0 +1,20 @@
+.three-layout {
+    display: flex;
+    width: 100%;
+}
+
+.three-layout .aside-left {
+    /* 位置排序 1 */
+    order: 1;
+    flex: 1, 1, auto;
+}
+
+.three-layout .main {
+    /* 位置排序 2 */
+    order: 2;
+}
+
+.three-layout .aside-right {
+    /* 位置排序 3 */
+    order: 3;
+}
